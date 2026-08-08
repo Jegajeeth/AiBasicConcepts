@@ -41,12 +41,12 @@ ax.plot(tokenizedTxt, 'o', markersize=10, markerfacecolor=[.0,.0,.0], linestyle=
 ax.grid(visible=True, axis="y");
 matplotlib.yticks(range(len(char_vocab)));
 
-ax2 = ax.twinx()
-ax2.plot(tokenizedTxt,alpha=0)
+ax2 = ax.twinx();  # create a second plot within the same graph
+ax2.plot(tokenizedTxt,alpha=0); # alpha - changes the oppacity of the plots
 
 # matplotlib.plot(xpoints, ypoints);
-matplotlib.ylabel("vocab_text");
-matplotlib.xlabel("txt_tokens");
+matplotlib.xlabel("vocab_text");
+matplotlib.ylabel("txt_tokens");
 matplotlib.yticks(range(len(char_vocab)), labels=list(char_vocab.keys()));
 matplotlib.show();
 
